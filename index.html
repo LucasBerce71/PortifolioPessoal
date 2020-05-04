@@ -137,7 +137,7 @@
                         <h2>Quem sou eu?</h2>
                         <p>
                             Olá, me chamo Lucas Bercê de Jesus, sou desenvolvedor web e mobile há 3 anos.
-                            Primeiramente gostaria de agradecer sua visita ao meu portifólio de projetos,
+                            Primeiramente gostaria de agradecer sua visita ao meu portifólio,
                             espero que goste dos projeto que você irá encontrar por aqui.
                         </p>
 
@@ -148,9 +148,9 @@
                             de computadores. Desenvolvi meu primeiro projeto web e mobile 
                             com <b>JAVA na parte mobile</b> e <b>ASP.NET C# na parte web</b> para o TCC do
                             curso, o projeto era um sistema de agendamentos online para salão de beleza.
-                            O grande desafio do projeto foi integrar uma mesma base de dados para o sistema web e mobile,
-                            com todo o esforço e dedicação da minha parte e do meu grupo finalizamos o projeto com sucesso
-                            e me formei com técnico em informática.
+                            O grande desafio do projeto foi integrar uma mesma base de dados para o sistema web e mobile.
+                            Com todo o esforço e dedicação da minha parte e do meu grupo finalizamos o projeto com sucesso
+                            e me formei como tecnico em informática.
                         </p>
 
                         <p>
@@ -174,7 +174,7 @@
         <div class="container">
             <div class="section-title text-left">
                 <h3>Serviços</h3>
-                <p>Ofereço os seguintes serviços para meus clientes</p>
+                <p>Ofereço os seguintes serviços para meus clientes:</p>
             </div><!-- end title -->
 
             <div class="row">
@@ -186,7 +186,7 @@
 						<h2>Desenvolvimento web</h2>
 						<p>
                             Se você precisa de uma solução web complexa ou até mesmo um simples
-                            website para uso pessoal ou seu negócio, entre em contato comigo.
+                            website para uso pessoal ou seu negócio.
                         </p>
 					</div>
                 </div><!-- end col -->
@@ -197,7 +197,7 @@
 						</div>
 						<h2>Design responsivo</h2>
 						<p>
-                            Se você se preocupa com a aprência e adaptação do seu website ou solução web,
+                            Se você se preocupa com a aparência e adaptação do seu website ou solução web,
                             fique tranquilo, pois entrego todos os projetos com um design responsivo que irá fazer
                             seu site se adaptar muito bem em todos os dispositivos acessados, seja no desktop, celular,
                             ou até mesmo televisão.
@@ -210,7 +210,7 @@
 							<i class="flaticon-development"></i>
 						</div>
 						<h2>APPS mobile</h2>
-						<p>Se você precisa de um aplicativo ao invés de um site entre em contato já.</p>
+						<p>Se você precisa de um aplicativo ao invés de um site entre em contato.</p>
 					</div>
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -221,7 +221,7 @@
 		<div class="container">
 			<div class="section-title text-left">
                 <h3>Meus projetos</h3>
-                <p>Aqui estão alguns dos meus projetos desenvolvidos durante a miunha carreira</p>
+                <p>Aqui estão alguns dos meus projetos desenvolvidos durante a minha carreira:</p>
             </div><!-- end title -->
 			
 			<div class="gallery-menu row">
@@ -249,7 +249,7 @@
 					<div class="gallery-single fix">
 						<img src="images/facillitta.PNG" class="img-fluid" alt="Image">
 						<div class="img-overlay">
-							<a href="https://github.com/LucasBerce71" target="_blank"  class="hoverbutton global-radius"><i class="fa fa-github"></i></a>
+							<a href="https://github.com/LucasBerce71/Facillitta" target="_blank"  class="hoverbutton global-radius"><i class="fa fa-github"></i></a>
 						</div>
 					</div>
 				</div>
@@ -347,32 +347,28 @@
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactForm">
+                        <form id="contactForm" method="POST" action="./contact.php">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<input class="form-control" id="name" type="text" placeholder="Seu nome" required="required" data-validation-required-message="Preencha o campo nome corretamente.">
-										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Seu Email" required="required" data-validation-required-message="Preencha o campo email corretamente.">
-										<p class="help-block text-danger"></p>
+										<input class="form-control" id="email" name="email" type="email" placeholder="Seu Email" required="required" data-validation-required-message="Preencha o campo email corretamente.">
 									</div>
 									<div class="form-group">
-										<input class="form-control" id="phone" type="tel" placeholder="Seu melhor contato" required="required" data-validation-required-message="Preencha o campo contato corretamente.">
-										<p class="help-block text-danger"></p>
+										<input class="form-control" id="phone" name="phone" type="tel" placeholder="Seu melhor contato" required="required" data-validation-required-message="Preencha o campo contato corretamente.">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Sua mensagem" required="required" data-validation-required-message="Preencha o campo mensagem corretamentee."></textarea>
-										<p class="help-block text-danger"></p>
+										<textarea class="form-control" name="message" id="message" placeholder="Sua mensagem" required="required" data-validation-required-message="Preencha o campo mensagem corretamentee."></textarea>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
-									<button id="sendMessageButton" onclick="sendMail()" class="sim-btn btn-hover-new">Enviar mensagem</button>
+									<input type="submit" id="sendMessageButton" class="sim-btn btn-hover-new" value="Enviar" />
 								</div>
 							</div>
 						</form>
@@ -447,7 +443,6 @@
 	<script src="js/parallaxie.js"></script>
 	<script src="js/headline.js"></script>
 	<!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
