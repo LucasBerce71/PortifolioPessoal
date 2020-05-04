@@ -17,7 +17,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
               "X=Mailer:PHP/".phpversion();
 
     if(mail($to,$subject,$body,$header)){
-        header("Location: index.html");
+        header("Location: contactSuccess.html");
     }else{
         echo("Não foi possível enviar o email, tente novamente!");
     }
